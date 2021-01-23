@@ -15,7 +15,7 @@ function validateId(req, res, next){
   const {id} = req.params
 
   if(!validate(id)){
-    return res.json({error:"Id is not valid"})
+    return res.status(400).json({error:"Id is not valid"})
   }
 
   return next()
